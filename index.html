@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill-Aware Job Matching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">SJ</div>
+        <div class="brand-text">
+          <h1>Skill-Aware Job Matching</h1>
+          <p>Integrasi Job Posting API dan Job-Skill Requirements API</p>
+        </div>
+      </div>
+      <div class="env-hint">
+        <span class="pill pill-primary">Frontend Demo</span>
+        <span class="pill">localhost:8080 · 6161</span>
+      </div>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="panel panel-left">
+      <div class="panel-header">
+        <h2>Daftar Lowongan</h2>
+        <p>Data diambil dari Job Posting Service</p>
+      </div>
+      <form id="search-form" class="search-bar">
+        <input id="search-input" type="text" placeholder="Cari berdasarkan judul, perusahaan, atau lokasi">
+        <button type="submit">Cari</button>
+      </form>
+      <div class="jobs-toolbar">
+        <button type="button" id="refresh-jobs">Muat Ulang</button>
+        <span id="jobs-count" class="meta-text"></span>
+      </div>
+      <div id="jobs-list" class="jobs-list"></div>
+      <div id="jobs-empty" class="empty-state hidden">
+        <p>Tidak ada lowongan yang ditemukan.</p>
+      </div>
+    </section>
+    <section class="panel panel-right">
+      <div class="panel-header">
+        <h2>Detail Lowongan & Profil Skill</h2>
+        <p>Data lowongan digabung dengan katalog skill</p>
+      </div>
+      <div id="job-detail-placeholder" class="empty-state">
+        <h3>Pilih salah satu lowongan</h3>
+        <p>Detail lowongan dan rekomendasi skill akan ditampilkan di sini.</p>
+      </div>
+      <div id="job-detail" class="job-detail hidden">
+        <header class="job-detail-header">
+          <div>
+            <h3 id="job-title"></h3>
+            <p id="job-company" class="muted"></p>
+          </div>
+          <span id="job-status" class="pill pill-status"></span>
+        </header>
+        <div class="job-meta">
+          <span id="job-location"></span>
+          <span id="job-type"></span>
+          <span id="job-created"></span>
+        </div>
+        <section class="job-section">
+          <h4>Deskripsi Pekerjaan</h4>
+          <p id="job-description"></p>
+        </section>
+        <section class="job-section">
+          <h4>Tag Lowongan</h4>
+          <div id="job-tags" class="tags-container"></div>
+        </section>
+        <section class="job-section">
+          <div class="section-header">
+            <h4>Rekomendasi Skill</h4>
+            <span id="skills-source" class="meta-text"></span>
+          </div>
+          <div id="skills-loading" class="inline-loading hidden">
+            <div class="spinner"></div>
+            <span>Mengambil data skill dari Job-Skill API...</span>
+          </div>
+          <div id="skills-error" class="error-text hidden"></div>
+          <div id="skills-container" class="skills-container"></div>
+          <div id="skills-empty" class="empty-state secondary hidden">
+            <p>Belum ada data skill yang cocok di Job-Skill API untuk judul lowongan ini.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Frontend integrasi untuk tugas DDD & Integrasi Layanan · Dibangun dengan HTML, CSS, dan JavaScript murni.</p>
+  </footer>
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
