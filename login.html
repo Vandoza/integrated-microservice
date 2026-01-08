@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login · Skill-Aware Job Matching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">SJ</div>
+        <div class="brand-text">
+          <h1>Skill-Aware Job Matching</h1>
+          <p>Silakan login untuk mengakses halaman utama</p>
+        </div>
+    </div>
+  </header>
+
+  <main class="auth-layout">
+    <section class="panel auth-panel">
+      <div class="panel-header">
+        <h2>Masuk</h2>
+        <p>Gunakan email, NIM, dan password yang sudah disediakan</p>
+      </div>
+      <form id="login-form" class="auth-form">
+        <label class="field">
+          <span>Email</span>
+          <input id="login-email" type="email" autocomplete="email" required placeholder="demo@kampus.ac.id">
+        </label>
+        <label class="field">
+          <span>NIM</span>
+          <input id="login-nim" type="text" autocomplete="username" required placeholder="13523001">
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input id="login-password" type="password" autocomplete="current-password" required placeholder="demo12345">
+        </label>
+        <div id="login-error" class="error-text hidden"></div>
+        <button type="submit" class="auth-submit">Login</button>
+      </form>
+      <div class="meta-text auth-hint">
+      </div>
+    </section>
+  </main>
+  <script src="assets/auth.js"></script>
+  <script src="assets/login.js"></script>
+</body>
+</html>

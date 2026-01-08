@@ -81,6 +81,18 @@ body {
   color: #022c22;
 }
 
+.pill-button {
+  cursor: pointer;
+  border: 1px solid #16a34a;
+  background-color: #facc15;
+  color: #022c22;
+  font-weight: 600;
+}
+
+.pill-button:hover {
+  background-color: #fbbf24;
+}
+
 .pill-status {
   font-size: 11px;
   text-transform: uppercase;
@@ -96,6 +108,70 @@ body {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+}
+
+.auth-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  width: 100%;
+}
+
+.auth-panel {
+  width: 100%;
+  max-width: 520px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field span {
+  font-size: 12px;
+  color: #bbf7d0;
+}
+
+.field input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #16a34a;
+  background-color: #022c22;
+  color: #f9fafb;
+  font-size: 14px;
+}
+
+.field input::placeholder {
+  color: #86efac;
+}
+
+.auth-submit {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #ca8a04;
+  background-color: #facc15;
+  color: #022c22;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background-color: #fbbf24;
+}
+
+.auth-hint {
+  margin-top: 8px;
+  text-align: center;
 }
 
 .panel {
@@ -439,6 +515,62 @@ body {
   .panel {
     min-height: 0;
   }
+}
+
+.auth-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+}
+
+.auth-panel {
+  width: 100%;
+  max-width: 460px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #bbf7d0;
+}
+
+.field input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #16a34a;
+  background-color: #022c22;
+  color: #f9fafb;
+  font-size: 14px;
+}
+
+.auth-submit {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #ca8a04;
+  background-color: #facc15;
+  color: #022c22;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.auth-submit:hover {
+  background-color: #fbbf24;
+}
+
+.auth-hint {
+  margin-top: 8px;
 }
 
 *:focus {
